@@ -1,0 +1,68 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    font-family: 'Merriweather', serif;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    
+
+}
+#first:first-letter {
+    font-size: 7em;
+    font-weight: bold;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+    margin-top: -10px;
+}
+
+h1 {
+    font-size: 40px;
+    
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid #ccc;
+}
+.section:first-of-type h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+
+h2 {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    break-inside: avoid-column;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+.section {
+    break-inside: avoid;
+    margin-bottom: 20px;
+}

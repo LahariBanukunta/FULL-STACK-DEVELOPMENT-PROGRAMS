@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.frame {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.frame1 {
+    background-color: #eca1a6;
+    position: relative;
+    width: 200px; /* Reduced width for the left frame */
+    flex-shrink: 0; /* Prevents frame1 from shrinking further */
+}
+
+.frame2 {
+    flex: 1; /* Takes up the remaining space */
+    background-color: #deeaee;
+    padding-left: 20px; /* Space between the content and the left frame */
+    position: relative; /* Base position for other positioning */
+}
+
+.frame2 .title {
+    position: sticky; /* Sticky position for titles */
+    top: 0;
+    background-color: #deeaee;
+    padding: 10px 0;
+    font-size: 24px;
+    z-index: 10;
+    position:sticky;
+    
+}
+
+.frame2 img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; /* Space between images */
+}
+
+.frame2 .content-section {
+    position: static; /* Default static positioning */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.frame2 .absolute-image {
+    position: absolute; /* Absolute positioning */
+    top: 100px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    width: 80%; /* Adjust width to fit within the frame */
+}
+
+.frame2 .fixed-image {
+    position: fixed; /* Fixed positioning */
+    bottom: 10px; /* Adjust bottom position as needed */
+    right: 10px; /* Adjust right position as needed */
+    width: 200px; /* Fixed width */
+}
+
+.frame2 .relative-image {
+    position: relative; /* Relative positioning */
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+}
+
+.frame2 .static-image {
+    position: static; /* Static positioning */
+    margin-top: 20px; /* Space above the image */
+}
+
+h1 {
+    font-size: 40px; /* Larger title for the left frame */
+    margin-bottom: 40px; /* Increased space below the title */
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    color: #212529; /* Title color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: fixed; /* Fixed position for the menu */
+    top: 120px;
+    width: 50%; /* Adjust to fit the frame1 width */
+}
+
+li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 30px;
+    display: block; /* Ensures each link takes full width */
+}
+
+a:hover {
+    color: white; /* Hover color */
+}
+
+.content-section {
+    display: none; /* Initially hide all content sections */
+    margin-bottom: 50px;
+    position: relative; /* Position relative for other elements */
+}
+
+.content-section:target {
+    display: block; /* Show the content section when its anchor link is clicked */
+}
+

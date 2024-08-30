@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup 2024 - Newspaper Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0;
+                background-color: #ffffff;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 20px;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            h1 {
+                font-size: 36px;
+                page-break-after: avoid;
+            }
+
+            .author {
+                background-color: yellow;
+                color: #000;
+                padding: 10px;
+                page-break-after: avoid;
+            }
+
+            .content {
+                display: block;
+                margin: 0;
+            }
+
+            .text-first,
+            .text-second {
+                margin-bottom: 0;
+            }
+
+            .image {
+                page-break-inside: avoid;
+                width: 100%;
+            }
+
+            .caption {
+                font-size: 0.8em;
+            }
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            font-size: 70px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            position: absolute;
+            left: 20px;
+            bottom: -50px;
+        }
+
+        .nav-menu select {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 70px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .author {
+            font-weight: bold;
+            margin-bottom: 50px;
+            color: #555;
+            background-color: yellow;
+            padding: 10px;
+            width: 300px;
+            font-size: 30px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1072px 383px;
+            gap: 20px;
+        }
+
+        .text-first {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+            text-align: justify;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        #first:first-letter {
+            font-size: 7em;
+            font-weight: bold;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+            margin-top: -10px;
+        }
+
+        .image {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+            width: 100%;
+            align-self: start;
+            margin-bottom: 0;
+            margin-top: -140px;
+        }
+
+        .caption {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .text-second {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+            column-count: 2;
+            column-gap: 20px;
+            text-align: justify;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                display: block;
+            }
+
+            .text-first {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .text-second {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>THE INDIAN EXPRESS</h1>
+        <div class="nav-menu">
+            <select onchange="window.location.href = this.value;">
+                <option value="article.html" selected>Cricket World Cup 2024</option>
+                <option value="olympics.html">Paris Olympics 2024</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>India Triumphs in T20 Cricket World Cup 2024</h1>
+        <div class="author">By Lahari Banukunta</div>
+        <div class="content">
+            <div class="text-first">
+                <p id="first">The T20 Cricket World Cup, which concluded on June 29th, saw India crowned champions after
+                    a thrilling final against South Africa. This victory marked the end of a long wait for India, who
+                    last won the tournament in 2007.</p>
+                <p>India’s performance throughout the tournament was exceptional, displaying remarkable composure and
+                    skill, culminating in their triumphant victory. The final match was a spectacle of high-quality
+                    cricket, with both teams demonstrating competitiveness and showcasing that they both deserved to be
+                    there on top.</p>
+                <p>India’s win was a fitting farewell for three of their cricketing greats—Rohit Sharma, Virat Kohli,
+                    and Ravindra Jadeja—who announced their retirements after the tournament. Their contributions to
+                    Indian cricket have been immense, and they left behind a legacy of excellence and sportsmanship
+                    inspiring the future generations. Their ability to perform under pressure and resilience was a true
+                    example of warriors.The cricketing world witnessed a historic moment as India claimed victory in the
+                    2024 T20 World Cup, defeating South Africa by 7 wickets in a thrilling final. The match, held at the
+                    iconic Eden Gardens in Kolkata, was a spectacle of high-intensity cricket, drawing fans from across
+                    the globe. This victory marked India’s second T20 World Cup title, the first since their inaugural
+                    triumph in 2007.</p>
+                <p>India's journey to the final was nothing short of remarkable. Entering the tournament as one of the
+                    favorites, they faced stiff competition from top cricketing nations. However, India’s dominance was
+                    evident throughout the tournament, as they remained unbeaten in the group stage. Their semi-final
+                    clash against England was a nail-biter, with India clinching victory in the last over, thanks to the
+                    heroics of Suryakumar Yadav and Jasprit Bumrah.</p>
+                <p>In the final, South Africa won the toss and opted to bat first. They posted a competitive total of
+                    172/6, with contributions from Quinton de Kock and Aiden Markram. However, India's bowlers, led by
+                    Bumrah and Kuldeep Yadav, kept the target within reach. The Indian chase was anchored by a stellar
+                    partnership between captain Rohit Sharma and Virat Kohli, who once again rose to the occasion in a
+                    World Cup final. Kohli’s unbeaten 82 and Sharma’s composed 45 set the stage for a comfortable chase,
+                    which was finished off in style by Hardik Pandya’s six in the 19th over.</p>
+                <p>This win is particularly significant as it marks the end of an era for Indian cricket. The final was
+                    the swansong for three modern-day legends: Rohit Sharma, Virat Kohli, and Ravindra Jadeja, all of
+                    whom announced their retirement from international cricket after the tournament. The trio's
+                    farewell was an emotional moment, with fans and teammates paying tribute to their illustrious
+                    careers.</p>
+
+            </div>
+            <div class="image">
+                <img src="india1.jpg" alt="Cricket World Cup 2024">
+                <p class="caption">India's victorious moment in the 2024 T20 Cricket World Cup final.</p>
+            </div>
+            <div class="text-second">
+                <p>The 2024 T20 Cricket World Cup final was held at Eden Gardens in Kolkata, where India secured a
+                    thrilling victory against South Africa by 7 wickets. This win marks a significant achievement for
+                    Indian cricket, ending a long wait for a T20 World Cup title since their inaugural win in 2007.</p>
+                <p>India’s journey through the tournament was marked by exceptional performances, both with the bat and
+                    ball. Their unbeaten run in the group stage and a dramatic semi-final victory over England set the
+                    stage for a memorable final.</p>
+                <p>The final match showcased the depth and talent within the Indian squad. Despite South Africa posting
+                    a
+                    competitive total, India's strong batting lineup and disciplined bowling ensured they chased down
+                    the
+                    target with ease.</p>
+                <p>This victory also signifies the end of an era for Indian cricket, with the retirement of key players
+                    like Rohit Sharma, Virat Kohli, and Ravindra Jadeja, who have been instrumental in shaping Indian
+                    cricket's modern success.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
