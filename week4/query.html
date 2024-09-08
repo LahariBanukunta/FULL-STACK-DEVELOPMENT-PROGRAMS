@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Element Periodically</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+           body {
+            
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #myElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+    </style>
+</head>
+<body>
+
+<div id="myElement">Hello World!</div>
+
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $("#myElement").fadeToggle(1000); // Toggles visibility every 1 second
+        }, 2000); // Interval of 2 seconds (1000ms for fadeToggle + 1000ms pause)
+    });
+</script>
+
+</body>
+</html>
