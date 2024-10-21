@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to JavaScript</title>
+</head>
+<body>
+
+    <h2>JSON to JavaScript</h2>
+
+    <script>
+        // JSON string
+        var jsonString = '{"name":"John", "age":30, "city":"New York"}';
+
+        // Converting JSON string to JavaScript object
+        var jsonObj = JSON.parse(jsonString);
+        console.log(jsonObj.name); // Outputs: John
+
+        // Converting JavaScript object to JSON string
+        var jsObject = {name: "Jane", age: 25, city: "London"};
+        var jsonStr = JSON.stringify(jsObject);
+        console.log(jsonStr); // Outputs: {"name":"Jane","age":25,"city":"London"}
+    </script>
+
+</body>
+</html>
