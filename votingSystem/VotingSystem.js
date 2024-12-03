@@ -27,9 +27,7 @@ function VotingSystem() {
     flexDirection: 'column',
     alignItems: 'center',
     minHeight: '100vh',
-    backgroundColor: '#282c34',
     paddingTop: '30px',
-    color: '#EDEDED',
   };
 
   const movieContainerStyle = {
@@ -44,11 +42,9 @@ function VotingSystem() {
   const movieCardStyle = {
     textAlign: 'center',
     padding: '20px',
-    backgroundColor: '#44475a',
-    color: '#f8f8f2',
+    border: '1px solid black',
     borderRadius: '15px',
     width: '280px',
-    boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.4)',
   };
 
   const buttonStyle = {
@@ -59,37 +55,36 @@ function VotingSystem() {
     borderRadius: '8px',
     border: 'none',
     color: '#fff',
-    transition: 'background-color 0.3s ease',
   };
 
   const likeButtonStyle = {
     ...buttonStyle,
-    backgroundColor: '#28a745',
+    backgroundColor: '#28a745', // Green for like
   };
 
   const dislikeButtonStyle = {
     ...buttonStyle,
-    backgroundColor: '#e74c3c',
+    backgroundColor: '#dc3545', // Red for dislike
   };
 
   const submitButtonStyle = {
     ...buttonStyle,
-    backgroundColor: '#3498db',
+    backgroundColor: '#007bff', // Blue for submit
     marginTop: '20px',
     padding: '12px 24px',
   };
 
   return (
     <div style={containerStyle}>
-      <h1 style={{ color: '#F5F5F5', fontSize: '2rem', marginBottom: '20px' }}>Vote for Your Favorite Movie</h1>
+      <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>Vote for Your Favorite Movie</h1>
       <div style={movieContainerStyle}>
         
         <div style={movieCardStyle}>
           <h3>Dangal</h3>
           <img src={dangal} alt="Dangal" style={{ width: '100%', height: '300px', borderRadius: '10px' }} />
           <div>
-            <button onClick={handleDangalLike} style={likeButtonStyle}>👍 Like ({dangalVotes})</button>
-            <button onClick={handleDangalDislike} style={dislikeButtonStyle}>👎 Dislike</button>
+            <button onClick={handleDangalLike} style={likeButtonStyle}>Like ({dangalVotes})</button>
+            <button onClick={handleDangalDislike} style={dislikeButtonStyle}>Dislike</button>
           </div>
         </div>
 
@@ -97,14 +92,14 @@ function VotingSystem() {
           <h3>Jersey</h3>
           <img src={jersey} alt="Jersey" style={{ width: '100%', height: '300px', borderRadius: '10px' }} />
           <div>
-            <button onClick={handleJerseyLike} style={likeButtonStyle}>👍 Like ({jerseyVotes})</button>
-            <button onClick={handleJerseyDislike} style={dislikeButtonStyle}>👎 Dislike</button>
+            <button onClick={handleJerseyLike} style={likeButtonStyle}>Like ({jerseyVotes})</button>
+            <button onClick={handleJerseyDislike} style={dislikeButtonStyle}>Dislike</button>
           </div>
         </div>
       </div>
 
       <button onClick={handleSubmit} style={submitButtonStyle}>Submit</button>
-      {winner && <h2 style={{ marginTop: '20px', color: '#EDEDED' }}>{winner}</h2>}
+      {winner && <h2 style={{ marginTop: '20px' }}>{winner}</h2>}
     </div>
   );
 }
