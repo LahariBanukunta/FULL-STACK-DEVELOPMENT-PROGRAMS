@@ -13,36 +13,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            width: 60%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .result {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .error {
-            margin-top: 20px;
-            font-size: 20px;
-            color: red;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
