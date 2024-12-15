@@ -1,0 +1,26 @@
+/* Center the block using flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+ 
+}
+
+/* Initial style for the block */
+#block {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 0; /* Square by default */
+  
+}
+
+/* Style for the button */
+#changeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
