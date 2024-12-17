@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ public class WelcomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Retrieve existing session
         HttpSession session = request.getSession(false);
-        
+         PrintWriter out = response.getWriter();
         // Redirect to login page if no session exists or if the session is invalid
         if (session == null || session.getAttribute("username") == null) {
             response.sendRedirect("index.html");
@@ -26,16 +27,16 @@ public class WelcomeServlet extends HttpServlet {
         // Retrieve username and loginTime from the session
         String username = (String) session.getAttribute("username");
         Date loginTime = (Date) session.getAttribute("loginTime"); // Correctly cast to Date
-        String startTime = new SimpleDateFormat("hh:mm:ss a").format(loginTime);
+       
 
         // Generate HTML response
         response.setContentType("text/html");
-        response.getWriter().println("<html><body>");
-        response.getWriter().println("<h2>Welcome, " + username + "</h2>");
-        response.getWriter().println("<div style='position: absolute; top: 10px; right: 10px;'>Start Time: " + startTime + "</div>");
-        response.getWriter().println("<form action='logout' method='post'>");
-        response.getWriter().println("<button type='submit'>Logout</button>");
-        response.getWriter().println("</form>");
-        response.getWriter().println("</body></html>");
+        out.println("<html><body>");
+        out.println("<h2>Welcome, " + username + "</h2>");
+        out.println("<div style='position: absolute; top: 10px; right: 10px;'>Start Time: " + loginTime + "</div>");
+        out.println("<form action='logout' method='post'>");
+       out.println("<button type='submit'>Logout</button>");
+        out.println("</form>");
+        out.println("</body></html>");
     }
 }
