@@ -2,55 +2,54 @@ import React, { useState } from 'react';
 
 function EventHandling() {
   const [count, setCount] = useState(0);
+  const [submittedValue, setSubmittedValue] = useState(null);
 
-  const countIncrement = () => {
-    setCount(count + 1);
-  };
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  const handleSubmit = () => setSubmittedValue(count);
 
-  const pageStyle = {
+  // CSS Styles
+  const containerStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100vh',
+    backgroundColor: 'lavender',
+    height: '100vh',
+    textAlign : 'center'
   };
 
-  const EventDivStyle = {
-    textAlign: 'center',
-    padding: '20px',
-    width: '300px',
-    height: '300px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    borderRadius: '10px',
-    border: '1px solid black',
-  };
+  
 
   const buttonStyle = {
     padding: '10px 20px',
-    border: '1px solid black',
+    margin: '10px 5px',
+    
     borderRadius: '5px',
+    backgroundColor: 'blue',
+    color: 'white',
+    
     cursor: 'pointer',
-    margin: '10px 5px', // Adds space between buttons
   };
 
   return (
-    <div style={pageStyle}>
-      <div style={EventDivStyle}>
-        <h2>Click the button to increment the count</h2>
-        <h2>Count is: {count}</h2>
-        <button
-          onClick={countIncrement}
-          style={buttonStyle}
-        >
-          Increment
-        </button>
-        <button
-          onClick={() => setCount(0)}
-          style={buttonStyle}
-        >
-          Reset
-        </button>
+    <div style={containerStyle}>
+      <div>
+        <h2>Counter Application</h2>
+        <h3>Current Count: {count}</h3>
+        <div>
+          <button style={buttonStyle} onClick={increment}>
+            Increment
+          </button>
+          <button style={buttonStyle} onClick={decrement}>
+            Decrement
+          </button>
+          <button style={buttonStyle} onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
+        {submittedValue !== null && (
+          <h3>Submitted Counter Value: {submittedValue}</h3>
+        )}
       </div>
     </div>
   );
